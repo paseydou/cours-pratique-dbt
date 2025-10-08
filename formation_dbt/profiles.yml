@@ -1,0 +1,7 @@
+formation_dbt: # nom du profile
+  target: dev # definir l'envirenement par defaut qui est dev
+  outputs:
+    dev: #ici on configure l'environnement de dev
+      type: duckdb
+      path: '.output/transformed_data.db' # ce chemin va accueillir les données transformées
+      schema: 'main' # nom du schema utilisé dans la base de donnée duckdb
