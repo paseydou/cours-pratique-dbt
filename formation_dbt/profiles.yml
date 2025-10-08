@@ -1,0 +1,7 @@
+formation_dbt: # nom du profil dbt
+  target: dev  # environnement par défaut
+  outputs:
+    dev:  # configuration de l'environnement de développement
+      type: duckdb  # type de base de données
+      path: ./output/transformed_data.db  # chemin vers le fichier DuckDB
+      schema: main  # schéma par défaut
