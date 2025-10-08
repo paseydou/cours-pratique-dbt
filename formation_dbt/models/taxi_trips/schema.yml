@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_yellow_tripdata         # nom du modèle SQL que tu créeras
+    description: "Données brutes des trajets Yellow Taxi"
+    columns:
+      - name: tpep_pickup_datetime
+        description: "Date et heure de prise en charge"
+        tests:
+          - not_null
+      - name: tpep_dropoff_datetime
+        description: "Date et heure de fin de course"
+        tests:
+          - not_null
+      - name: trip_distance
+        description: "Distance du trajet en miles"
+        tests:
+          - not_null
+

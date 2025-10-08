@@ -1,0 +1,15 @@
+version: 2  # ← indique à dbt qu’on utilise le format moderne
+
+sources: # je vais definir le nom de ma source de données
+  - name: tlc_taxi_trips # ← nom de la source de données
+    meta: # ← section meta pour ajouter des informations supplémentaires
+      external_location: 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet' # source externe
+      formatter: oldstyle 
+    tables:
+      - name: raw_yellow_tripdata
+
+
+
+  
+      
+      
